@@ -104,6 +104,7 @@ typedef NS_ENUM(NSUInteger, iRateErrorCode)
 - (BOOL)iRateShouldOpenAppStore;
 - (void)iRateDidOpenAppStore;
 - (void)iRateWillPresentAlertViewController:(UIAlertController *)controller;
+- (void)iRateWillPresentAlertView:(UIAlertView *)alertView;
 
 @end
 
