@@ -1013,7 +1013,10 @@ static NSString *const iRateMacAppStoreURLFormat = @"macappstore://itunes.apple.
     {
         [self remindLater];
     }
-
+    
+    if ([self.delegate respondsToSelector:@selector(iRateDidDismissWithButtonIndex:)]) {
+        [self.delegate iRateDidDismissWithButtonIndex:buttonIndex];
+    }
 
     //release alert
     self.visibleAlert = nil;
