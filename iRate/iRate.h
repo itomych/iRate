@@ -103,6 +103,8 @@ typedef NS_ENUM(NSUInteger, iRateErrorCode)
 - (void)iRateUserDidRequestReminderToRateApp;
 - (BOOL)iRateShouldOpenAppStore;
 - (void)iRateDidOpenAppStore;
+- (void)iRateDidPresFeedback;
+- (void)iRateWillPresentAlertViewController:(UIAlertController *)controller;
 
 @end
 
@@ -135,6 +137,7 @@ typedef NS_ENUM(NSUInteger, iRateErrorCode)
 @property (nonatomic, copy) NSString *updateMessage;
 @property (nonatomic, copy) NSString *cancelButtonLabel;
 @property (nonatomic, copy) NSString *remindButtonLabel;
+@property (nonatomic, copy) NSString *feedbackButtonLabel;
 @property (nonatomic, copy) NSString *rateButtonLabel;
 
 //debugging and prompt overrides
