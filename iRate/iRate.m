@@ -62,7 +62,6 @@ NSString *const iRateUpdateMessageKey = @"iRateUpdateMessage";
 NSString *const iRateCancelButtonKey = @"iRateCancelButton";
 NSString *const iRateRemindButtonKey = @"iRateRemindButton";
 NSString *const iRateRateButtonKey = @"iRateRateButton";
-NSString *const iRateFeedbackButtonKey = @"iRateFeedbackButton";
 
 NSString *const iRateCouldNotConnectToAppStore = @"iRateCouldNotConnectToAppStore";
 NSString *const iRateDidDetectAppUpdate = @"iRateDidDetectAppUpdate";
@@ -997,7 +996,6 @@ static NSString *const iRateMacAppStoreURLFormat = @"macappstore://itunes.apple.
     NSInteger rateButtonIndex = 0;
     NSInteger cancelButtonIndex = [self showCancelButton]? 1: 0;
     NSInteger remindButtonIndex = [self showRemindButton]? cancelButtonIndex + 1: 0;
-    NSInteger feedbackButtonIndex = 3;
 
     if (buttonIndex == rateButtonIndex)
     {
@@ -1010,10 +1008,6 @@ static NSString *const iRateMacAppStoreURLFormat = @"macappstore://itunes.apple.
     else if (buttonIndex == remindButtonIndex)
     {
         [self remindLater];
-    }
-    else if (buttonIndex == feedbackButtonIndex)
-    {
-        [self feedback];
     }
 
 
